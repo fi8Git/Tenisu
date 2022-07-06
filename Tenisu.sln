@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenisu", "Tenisu\Tenisu.csproj", "{68F63A2D-5134-43C9-8C0C-F8F5F4A01ED3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenisuTests", "TenisuTests\TenisuTests.csproj", "{D71A71D8-048B-44FD-A4FB-D294282DAF46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{68F63A2D-5134-43C9-8C0C-F8F5F4A01ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68F63A2D-5134-43C9-8C0C-F8F5F4A01ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68F63A2D-5134-43C9-8C0C-F8F5F4A01ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D71A71D8-048B-44FD-A4FB-D294282DAF46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71A71D8-048B-44FD-A4FB-D294282DAF46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71A71D8-048B-44FD-A4FB-D294282DAF46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71A71D8-048B-44FD-A4FB-D294282DAF46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
