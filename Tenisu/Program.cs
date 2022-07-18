@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen(opt =>
 {
     opt.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Tenisu API",
+        Title = "Tenisu",
         Description = "Simple API to return tennis player stats.",
         Version = "v1"
     });
