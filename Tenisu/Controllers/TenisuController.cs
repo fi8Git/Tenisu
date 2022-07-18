@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Tenisu.Models;
 using Tenisu.Services.Interfaces;
 
@@ -19,29 +18,26 @@ namespace Tenisu.Controllers
         }
 
         [HttpGet("[action]")]
-        public ActionResult GetListPlayersOrderByRank()
+        public ActionResult<List<PlayerModel>> GetListPlayersOrderByRank()
         {
             var listPlayer = _playerService.GetPlayerList();
 
-            if (listPlayer.Count == 0)
-                return BadRequest("aucun joueur enregisté");
-
-            return Ok(listPlayer.OrderBy(p => p.Data.Rank));
+            return listPlayer.OrderBy(p => p.Data.Rank).ToList();
         }
 
         [HttpGet("[action]/{id}")]
-        public ActionResult GetPlayerById(int id)
+        public ActionResult<PlayerModel> GetPlayerById(int id)
         {
             var player = _playerService.GetPlayerById(id);
 
             if (player == null)
-                return BadRequest("aucun joueur trouvé");
+                return NotFound();
 
-            return Ok(player);
+            return player;
         }
 
         [HttpGet("[action]")]
-        public ActionResult GetPlayersStatistics()
+        public ActionResult<StatisticsModel> GetPlayersStatistics()
         {
             var players = _playerService.GetPlayerList();
             var imcList = players.Select(p => p.Data.GetImcOfPlayer()).ToList();
@@ -54,7 +50,7 @@ namespace Tenisu.Controllers
                 MedianOfPlayersHeight = _statService.GetMedian(playersHeight),
             };
 
-            return Ok(playersStats);
+            return playersStats;
         }
     }
 }
